@@ -5,15 +5,18 @@
 #include "list.h"
 #include "save.h"
 
+//Creating the fs namespace for convenience
 namespace fs = std::filesystem;
 
 void list::list(std::string snapshotsFile)
 {
+
+	//Creating variables to read the snapshots file
 	std::string file{ snapshotsFile };
 	std::string line;
 
 
-
+	//If file exists read it
 	if (fs::exists(file))
 	{
 		std::fstream fle(file, std::ios::in);
@@ -27,6 +30,8 @@ void list::list(std::string snapshotsFile)
 			}
 		}
 
+
+		//error handling
 		else
 		{
 			std::cout << "File isint open";

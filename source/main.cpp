@@ -7,9 +7,11 @@
 
 int main()
 {
+	//Create the variable that will be used to enter commands
 	std::string cmd_msg{};
 
 
+	//A while loop that is the core of the program, based on the commands the user enters, their respective functions will be called
 	while (cmd_msg != "exit")
 	{
 		std::getline(std::cin, cmd_msg);
